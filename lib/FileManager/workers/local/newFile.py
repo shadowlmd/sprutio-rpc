@@ -21,7 +21,7 @@ class NewFile(BaseWorkerCustomer):
                 if os.path.exists(abs_path):
                     raise OSError("File path already exists")
 
-                fd = os.open(abs_path, os.O_CREAT, 0o600)
+                fd = os.open(abs_path, os.O_CREAT, 0o644)
                 os.close(fd)
 
                 info = self._make_file_info(abs_path)

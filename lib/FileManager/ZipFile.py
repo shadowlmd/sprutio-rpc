@@ -1444,7 +1444,7 @@ class ZipFile:
                 zinfo.external_attr = 0o40775 << 16  # drwxrwxr-x
                 zinfo.external_attr |= 0x10  # MS-DOS directory flag
             else:
-                zinfo.external_attr = 0o600 << 16  # ?rw-------
+                zinfo.external_attr = 0o644 << 16  # ?rw-r--r--
         else:
             zinfo = zinfo_or_arcname
 

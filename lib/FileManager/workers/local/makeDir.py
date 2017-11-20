@@ -17,7 +17,7 @@ class MakeDir(BaseWorkerCustomer):
             self.logger.debug("FM MakeDir worker run(), abs_path = %s" % abs_path)
 
             try:
-                os.mkdir(abs_path, 0o700)
+                os.mkdir(abs_path, 0o755)
                 info = self._make_file_info(abs_path)
                 info["name"] = self.path
 
